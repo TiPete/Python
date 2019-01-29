@@ -5,10 +5,10 @@ change = [[100, '100$'], [50, '50$'], [20, '20$'], [10, '10$'], [5, '5$'], [2, '
 
 def changeur(index, argent):
     x = int(argent / change[index][0])
-    if x != 0:
+    if x:
         print (str(x) + " X " + str(change[index][1]))
     argent -= change[index][0] * x
-    if index != (len(change) - 1):
+    if index < (len(change)-1):
         changeur(index + 1, argent)
 
 print ("Quel montant souhaitez-vous changer: ")
