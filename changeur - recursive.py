@@ -7,7 +7,7 @@ def changeur(index, argent):
     x = int(argent / change[index][0])
     if x:
         print (str(x) + " X " + str(change[index][1]))
-    argent -= change[index][0] * x
+    argent -= change[index][0]*x
     if index < (len(change)-1):
         changeur(index + 1, argent)
 
